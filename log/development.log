@@ -1,0 +1,227 @@
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (140.0ms)[0m   [0;1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (204.0ms)[0m   [0mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateAgendas (20091217000239)
+  [4;36;1mSQL (188.0ms)[0m   [0;1mCREATE TABLE `agendas` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `title` varchar(255), `description` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (62.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091217000239')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `agendas`[0m
+  [4;36;1mSQL (453.0ms)[0m   [0;1mdescribe `agendas`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `agendas`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AgendasController#index (for 127.0.0.1 at 2009-12-16 19:16:05) [GET]
+  [4;35;1mAgenda Load (0.0ms)[0m   [0mSELECT * FROM `agendas` [0m
+Rendering template within layouts/agendas
+Rendering agendas/index
+Completed in 7563ms (View: 7547, DB: 0) | 200 OK [http://localhost/agendas]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AgendasController#new (for 127.0.0.1 at 2009-12-16 19:16:50) [GET]
+  [4;35;1mAgenda Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `agendas`[0m
+Rendering template within layouts/agendas
+Rendering agendas/new
+Completed in 31ms (View: 15, DB: 0) | 200 OK [http://localhost/agendas/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AgendasController#index (for 127.0.0.1 at 2009-12-16 19:17:51) [GET]
+  [4;35;1mAgenda Load (0.0ms)[0m   [0mSELECT * FROM `agendas` [0m
+Rendering template within layouts/agendas
+Rendering agendas/index
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/agendas]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AgendasController#show (for 127.0.0.1 at 2009-12-16 19:18:02) [GET]
+  Parameters: {"id"=>"show"}
+  [4;35;1mAgenda Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `agendas`[0m
+  [4;36;1mAgenda Load (16.0ms)[0m   [0;1mSELECT * FROM `agendas` WHERE (`agendas`.`id` = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Agenda with ID=show):
+  app/controllers/agendas_controller.rb:16:in `show'
+
+Rendered rescues/_trace (156.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AgendasController#new (for 127.0.0.1 at 2009-12-16 19:18:16) [GET]
+  [4;36;1mAgenda Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `agendas`[0m
+Rendering template within layouts/agendas
+Rendering agendas/new
+Completed in 15ms (View: 0, DB: 0) | 200 OK [http://localhost/agendas/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AgendasController#show (for 127.0.0.1 at 2009-12-16 19:18:20) [GET]
+  Parameters: {"id"=>"show"}
+  [4;36;1mAgenda Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `agendas`[0m
+  [4;35;1mAgenda Load (0.0ms)[0m   [0mSELECT * FROM `agendas` WHERE (`agendas`.`id` = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Agenda with ID=show):
+  app/controllers/agendas_controller.rb:16:in `show'
+
+Rendered rescues/_trace (63.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AgendasController#show (for 127.0.0.1 at 2009-12-16 19:18:23) [GET]
+  Parameters: {"id"=>"index"}
+  [4;35;1mAgenda Columns (15.0ms)[0m   [0mSHOW FIELDS FROM `agendas`[0m
+  [4;36;1mAgenda Load (0.0ms)[0m   [0;1mSELECT * FROM `agendas` WHERE (`agendas`.`id` = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Agenda with ID=index):
+  app/controllers/agendas_controller.rb:16:in `show'
+
+Rendered rescues/_trace (360.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AgendasController#show (for 127.0.0.1 at 2009-12-16 19:18:25) [GET]
+  Parameters: {"id"=>"index"}
+  [4;36;1mAgenda Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `agendas`[0m
+  [4;35;1mAgenda Load (0.0ms)[0m   [0mSELECT * FROM `agendas` WHERE (`agendas`.`id` = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Agenda with ID=index):
+  app/controllers/agendas_controller.rb:16:in `show'
+
+Rendered rescues/_trace (78.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AgendasController#index (for 127.0.0.1 at 2009-12-16 19:18:31) [GET]
+  [4;35;1mAgenda Load (0.0ms)[0m   [0mSELECT * FROM `agendas` [0m
+Rendering template within layouts/agendas
+Rendering agendas/index
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/agendas/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AgendasController#show (for 127.0.0.1 at 2009-12-16 19:19:59) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mAgenda Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `agendas`[0m
+  [4;36;1mAgenda Load (0.0ms)[0m   [0;1mSELECT * FROM `agendas` WHERE (`agendas`.`id` = 1) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Agenda with ID=1):
+  app/controllers/agendas_controller.rb:16:in `show'
+
+Rendered rescues/_trace (62.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AgendasController#index (for 127.0.0.1 at 2009-12-16 19:20:10) [GET]
+  [4;36;1mAgenda Load (0.0ms)[0m   [0;1mSELECT * FROM `agendas` [0m
+Rendering template within layouts/agendas
+Rendering agendas/index
+Completed in 62ms (View: 15, DB: 0) | 200 OK [http://localhost/agendas/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AgendasController#new (for 127.0.0.1 at 2009-12-16 19:20:11) [GET]
+  [4;36;1mAgenda Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `agendas`[0m
+Rendering template within layouts/agendas
+Rendering agendas/new
+Completed in 156ms (View: 93, DB: 0) | 200 OK [http://localhost/agendas/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AgendasController#create (for 127.0.0.1 at 2009-12-16 19:20:23) [POST]
+  Parameters: {"agenda"=>{"title"=>"December OSCC", "description"=>"We created an app!"}, "commit"=>"Create", "authenticity_token"=>"BvnZNPGMo3Q9fOb89rFR9HlfkoSXjUWXT8Z9kO/7nzE="}
+  [4;36;1mAgenda Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `agendas`[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mAgenda Create (0.0ms)[0m   [0;1mINSERT INTO `agendas` (`updated_at`, `title`, `description`, `created_at`) VALUES('2009-12-17 00:20:23', 'December OSCC', 'We created an app!', '2009-12-17 00:20:23')[0m
+  [4;35;1mSQL (78.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/agendas/1
+Completed in 109ms (DB: 94) | 302 Found [http://localhost/agendas]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AgendasController#show (for 127.0.0.1 at 2009-12-16 19:20:23) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mAgenda Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `agendas`[0m
+  [4;36;1mAgenda Load (0.0ms)[0m   [0;1mSELECT * FROM `agendas` WHERE (`agendas`.`id` = 1) [0m
+Rendering template within layouts/agendas
+Rendering agendas/show
+Completed in 31ms (View: 15, DB: 0) | 200 OK [http://localhost/agendas/1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AgendasController#edit (for 127.0.0.1 at 2009-12-16 19:20:49) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mAgenda Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `agendas`[0m
+  [4;35;1mAgenda Load (15.0ms)[0m   [0mSELECT * FROM `agendas` WHERE (`agendas`.`id` = 1) [0m
+Rendering template within layouts/agendas
+Rendering agendas/edit
+Completed in 31ms (View: 16, DB: 15) | 200 OK [http://localhost/agendas/edit/1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AgendasController#show (for 127.0.0.1 at 2009-12-16 19:21:59) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mAgenda Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `agendas`[0m
+  [4;36;1mAgenda Load (0.0ms)[0m   [0;1mSELECT * FROM `agendas` WHERE (`agendas`.`id` = 1) [0m
+Rendering template within layouts/agendas
+Rendering agendas/show
+Completed in 32ms (View: 0, DB: 0) | 200 OK [http://localhost/agendas/1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AgendasController#index (for 127.0.0.1 at 2009-12-16 19:22:00) [GET]
+  [4;36;1mAgenda Load (0.0ms)[0m   [0;1mSELECT * FROM `agendas` [0m
+Rendering template within layouts/agendas
+Rendering agendas/index
+  [4;35;1mAgenda Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `agendas`[0m
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/agendas]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AgendasController#index (for 127.0.0.1 at 2009-12-16 19:28:36) [GET]
+  [4;35;1mAgenda Load (0.0ms)[0m   [0mSELECT * FROM `agendas` [0m
+Rendering template within layouts/agendas
+Rendering agendas/index
+  [4;36;1mAgenda Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `agendas`[0m
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/agendas]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AgendasController#new (for 127.0.0.1 at 2009-12-16 19:28:37) [GET]
+  [4;36;1mAgenda Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `agendas`[0m
+Rendering template within layouts/agendas
+Rendering agendas/new
+Completed in 31ms (View: 15, DB: 0) | 200 OK [http://localhost/agendas/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AgendasController#create (for 127.0.0.1 at 2009-12-16 19:28:40) [POST]
+  Parameters: {"agenda"=>{"title"=>"", "description"=>"sdfsdf"}, "commit"=>"Create", "authenticity_token"=>"BvnZNPGMo3Q9fOb89rFR9HlfkoSXjUWXT8Z9kO/7nzE="}
+  [4;36;1mAgenda Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `agendas`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+Rendering template within layouts/agendas
+Rendering agendas/new
+Completed in 47ms (View: 16, DB: 0) | 200 OK [http://localhost/agendas]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AgendasController#new (for 127.0.0.1 at 2009-12-16 19:28:48) [GET]
+  [4;36;1mAgenda Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `agendas`[0m
+Rendering template within layouts/agendas
+Rendering agendas/new
+Completed in 31ms (View: 15, DB: 0) | 200 OK [http://localhost/agendas/new]
