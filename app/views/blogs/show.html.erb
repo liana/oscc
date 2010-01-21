@@ -1,0 +1,6 @@
+<h1><%= @blog.title %></h1>
+<h2>by <%= @blog.author %></h2>
+<div class="blogtext"><%= @blog.body %></div>
+
+<%= link_to 'Edit', edit_blog_path(@blog) %> |
+<%= link_to 'Back', blogs_path %>
